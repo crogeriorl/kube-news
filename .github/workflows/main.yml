@@ -56,4 +56,4 @@ jobs:
           images: crogeriorl/kube-news:v${{github.run_number}}
           manifests: |
             k8s/deployment.yaml
-            secrets.yaml
+            k8s/secrets.yaml
