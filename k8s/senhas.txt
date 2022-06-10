@@ -1,0 +1,4 @@
+db_host: MTAuMTAuMTAuNTA=
+db_database: a3ViZW5ld3M=
+db_username: cG9zdGdyZXM=
+db_password: cm9nMTAw

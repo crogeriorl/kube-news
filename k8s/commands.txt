@@ -1,0 +1,61 @@
+https://k3d.io
+-----------------
+
+** no browser, acessar:  http://10.10.10.36:30001/
+
+
+  502  kubectl port-forward pods/meudeployment-b9548cb65-knckw 80:80 --address 0.0.0.0
+
+  515  k3d cluster create cluster1 --servers 2 --agents 3 -p "30001:30001@loadbalancer"
+
+kubectl cluster-info
+
+kubectl get nodes
+
+kubectl apply -f deployment.yaml
+
+kubectl apply -f secrets.yaml
+kubectl get secret mysecret -o yaml
+
+
+  516  docker container ls
+
+  519  kubectl get services
+
+  522  kubectl delete -f deployment.yml
+
+  527  kubectl delete -f deployment.yml
+  528  top -d 1
+
+  534  kubectl apply -f deployment.yml
+
+  544  kubectl get po
+
+  550  kubectl rollout undo deployment meudeployment
+
+  552  kubectl delete -f deployment.yml
+  553  kubectl get nodes
+  554  git clone https://github.com/crogeriorl/kube-news.git
+  555  cd kube-news/
+  556  ls -l
+  557  cd src
+  558  ls -l
+  559  docker build -t crogeriorl/kube-news:v1 -f Dockerfile .
+  560  docker image ls
+  561  docker push crogeriorl/kube-news:v1
+  562  docker tag crogeriorl/kube-news:v1 crogeriorl/kube-news:latest
+  563  docker push crogeriorl/kube-news:latest
+
+  587  kubectl delete -f deployment.yaml 
+ 
+
+
+  589  kubectl apply -f deployment.yaml
+
+  590  kubectl get pods
+
+  591  kubectl logs kubenews-6444b6c7bd-m6rpj
+
+  592  kubectl get all
+
+       k3d cluster delete cluster1
