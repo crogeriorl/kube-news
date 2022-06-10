@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: kubenews
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: kubenews
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: crogeriorl/kube-news:v1
+        image: crogeriorl/kube-news:v10
         env:
         - name:  DB_DATABASE
           valueFrom:
