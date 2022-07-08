@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: crogeriorl/kube-news:latest
+        image: crogeriorl/kube-news:v15
         env:
         - name:  DB_DATABASE
           valueFrom:
