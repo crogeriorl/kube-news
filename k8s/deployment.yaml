@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kubenews
-          image: crogeriorl/kube-news:v25
+          image: crogeriorl/kube-news:v26
           env:
             - name: DB_DATABASE
               valueFrom:
@@ -49,3 +49,7 @@ spec:
       targetPort: 8080
       nodePort: 30001
   type: NodePort
+  template:
+    spec:
+      containers:
+        - image: crogeriorl/kube-news:v26
