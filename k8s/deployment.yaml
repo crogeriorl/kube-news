@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: kubenews
-          image: https://hub.docker.com/repository/docker/crogeriorl/kube-news:v24
+          image: crogeriorl/kube-news:v25
           env:
             - name: DB_DATABASE
               valueFrom:
@@ -52,4 +52,4 @@ spec:
   template:
     spec:
       containers:
-        - image: https://hub.docker.com/repository/docker/crogeriorl/kube-news:v24
+        - image: crogeriorl/kube-news:v25
