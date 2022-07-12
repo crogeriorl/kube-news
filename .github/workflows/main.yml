@@ -71,7 +71,7 @@ jobs:
       - name: update infra yaml file
         run: |
           cd k8s
-          yq e -i '.spec.template.spec.containers[0].image="https://hub.docker.com/repository/docker/crogeriorl/kube-news:v${{github.run_number}}"' deployment.yaml
+          yq e -i '.spec.template.spec.containers[0].image="crogeriorl/kube-news:v${{github.run_number}}"' deployment.yaml
           cat deployment.yaml
 
       - name: push change
