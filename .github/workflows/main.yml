@@ -59,6 +59,9 @@ jobs:
   #           k8s/deployment.yaml
   #           k8s/secrets.yaml
   CD:  
+    runs-on: ubuntu-latest
+    needs: [CI]    # depends on 'CI' job
+    steps:  
     - name: install yq
       uses: mikefarah/yq@v4.15.1 
 
