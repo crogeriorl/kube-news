@@ -49,7 +49,3 @@ spec:
       targetPort: 8080
       nodePort: 30001
   type: NodePort
-  template:
-    spec:
-      containers:
-        - image: https://hub.docker.com/repository/docker/crogeriorl/kube-news:v24

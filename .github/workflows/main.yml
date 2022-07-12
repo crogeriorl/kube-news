@@ -85,4 +85,4 @@ jobs:
           destination_folder: k8s
           user_email: crogeriolopes@gmail.com
           user_name: crogeriorl
-          commit_message: update image version ${{ steps.get_version.outputs.VERSION }}
+          commit_message: update image version v${{github.run_number}}
