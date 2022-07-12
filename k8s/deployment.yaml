@@ -49,7 +49,3 @@ spec:
       targetPort: 8080
       nodePort: 30001
   type: NodePort
-  template:
-    spec:
-      containers:
-        - image: crogeriorl/kube-news:v25
