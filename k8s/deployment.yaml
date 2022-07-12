@@ -36,20 +36,3 @@ spec:
                 secretKeyRef:
                   name: mysecret
                   key: db_host
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: kubenews
-spec:
-  selector:
-    app: kubenews
-  ports:
-    - port: 80
-      targetPort: 8080
-      nodePort: 30001
-  type: NodePort
-  template:
-    spec:
-      containers:
-        - image: crogeriorl/kube-news:v26
