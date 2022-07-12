@@ -13,29 +13,29 @@ spec:
         app: kubenews
     spec:
       containers:
-      - name: kubenews
-        image: crogeriorl/kube-news:v17
-        env:
-        - name:  DB_DATABASE
-          valueFrom:
-            secretKeyRef:
-              name: mysecret
-              key: db_database
-        - name:  DB_USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: mysecret
-              key: db_username
-        - name:  DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysecret
-              key: db_password
-        - name:  DB_HOST
-          valueFrom:
-            secretKeyRef:
-              name: mysecret
-              key: db_host
+        - name: kubenews
+          image: https://hub.docker.com/repository/docker/crogeriorl/kube-news:v24
+          env:
+            - name: DB_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: db_database
+            - name: DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: db_username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: db_password
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: mysecret
+                  key: db_host
 ---
 apiVersion: v1
 kind: Service
@@ -45,7 +45,11 @@ spec:
   selector:
     app: kubenews
   ports:
-  - port: 80
-    targetPort: 8080
-    nodePort: 30001
+    - port: 80
+      targetPort: 8080
+      nodePort: 30001
   type: NodePort
+  template:
+    spec:
+      containers:
+        - image: https://hub.docker.com/repository/docker/crogeriorl/kube-news:v24
