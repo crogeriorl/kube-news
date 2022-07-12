@@ -48,8 +48,4 @@ spec:
     - port: 80
       targetPort: 8080
       nodePort: 30001
-<<<<<<< HEAD
   type: NodePort
-=======
-  type: NodePort
->>>>>>> d3bd2cb1c7b2f1e7ef7b0ea889b038f708e6cd02
