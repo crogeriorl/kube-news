@@ -1,0 +1,1 @@
+helm upgrade --install prometheus prometheus-community/prometheus --set alertmanager.enabled=false,server.PersistentVolume.enabled=false,server.service.type=NodePort,server.global.scrape_interval=10s,pushgateway.enabled=false
