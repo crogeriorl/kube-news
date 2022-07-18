@@ -7,6 +7,11 @@ spec:
   selector:
     matchLabels:
       app: kubenews
+  strategy:
+    rollingUpdate:
+      maxSurge: 3
+      maxUnavailable: 2
+    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -19,6 +24,13 @@ spec:
       containers:
         - name: kubenews
           image: crogeriorl/kube-news:v27
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "256m"
+            limits:
+              memory: "384Mi"
+              cpu: "384m"
           env:
             - name: DB_DATABASE
               valueFrom:
