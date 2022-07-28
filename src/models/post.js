@@ -7,7 +7,7 @@ const DB_HOST = process.env.DB_HOST || "localhost";
 
 const seque = new sequelize.Sequelize(DB_DATABASE, DB_USERNAME, DB_PASSWORD, {
     host: DB_HOST,
-    dialect: 'postgres'
+    dialect: 'mysql'
   });
 
 class Post extends sequelize.Model {
