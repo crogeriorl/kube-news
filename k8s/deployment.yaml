@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: kubenews
-          image: crogeriorl/kube-news:v28
+          image: crogeriorl/kube-news:v27
           resources:
             requests:
               memory: "256Mi"
