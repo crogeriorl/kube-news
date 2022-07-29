@@ -36,19 +36,19 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: mysecret
-                  key: pdb_database
+                  key: db_database
             - name: DB_USERNAME
               valueFrom:
                 secretKeyRef:
                   name: mysecret
-                  key: mdb_username
+                  key: db_username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mysecret
-                  key: mdb_password
+                  key: db_password
             - name: DB_HOST
               valueFrom:
                 secretKeyRef:
                   name: mysecret
-                  key: pdb_host
+                  key: db_host
